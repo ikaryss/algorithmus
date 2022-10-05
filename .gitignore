@@ -145,4 +145,4 @@ cython_debug/
 poetry.lock
 
 # jupyter tests
-tech_tests.ipynb
+test.ipynb

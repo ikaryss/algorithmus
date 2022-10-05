@@ -1,5 +1,12 @@
-def insertion_sort(array):
-    arr_len = len(array)
+cimport cython
+
+@cython.boundscheck(False)  # Deactivate bounds checking
+@cython.wraparound(False)   # Deactivate negative indexing.
+def insertion_sort(long[::1] array):
+
+    cdef int arr_len = len(array)
+    cdef int j
+    cdef int i
 
     if arr_len < 2:
         raise ValueError("Arrays with lengths of 2 or more are allowed")
